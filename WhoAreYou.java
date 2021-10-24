@@ -18,7 +18,7 @@ public class WhoAreYou {
         scan.nextLine();
         
         System.out.println("Please enter your ethnicity: ");
-        person01.setEthnicity(scan.nextLine());
+        person01.setEthnicity(scan.nextLine()); // needs enum (European, Asian, American, African, Australian)
 
         scan.close();
 
