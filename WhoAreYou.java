@@ -38,7 +38,7 @@ public class WhoAreYou extends Application {
                 person01.setEthnicity(You.Ethnicity.African);
                 break;
             case "American":
-                person01.setEthnicity(You.Ethnicity.African);
+                person01.setEthnicity(You.Ethnicity.American);
                 break;
             case "Australian":
                 person01.setEthnicity(You.Ethnicity.Australian);
@@ -78,10 +78,10 @@ public class WhoAreYou extends Application {
         GridPane.setConstraints(ethnicityLabel, 0, 3);
 
         // Feedback Text
-        Text yourFirstName = null;  
-        Text yourLastaName = null;
-        Text yourAge = null;
-        Text yourEthnicity = null;
+        Text yourFirstName = new Text();  
+        Text yourLastaName = new Text();
+        Text yourAge = new Text();
+        Text yourEthnicity = new Text();
         
         yourFirstName.setText(person01.getFirstname()); 
         GridPane.setConstraints(yourFirstName, 1, 0);
