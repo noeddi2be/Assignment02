@@ -27,8 +27,20 @@ public class You {
         this.yEthnicity = yEthnicity;
     }
 
-    public String getYou() {
-        return "First Name: " + firstname + "\n" + "Last Name: " + lastname + "\n" + "Age: " + age + "\n" + "Ethnicity: " + yEthnicity.toString();
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public Ethnicity getEthnicity() {
+        return yEthnicity;
     }
 }
 
