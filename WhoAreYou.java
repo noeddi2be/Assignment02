@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import javafx.application.Application;
+import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -58,7 +59,7 @@ public class WhoAreYou extends Application {
 
         // Scene with Main Grid
         GridPane grid = new GridPane();
-        Scene scene1 = new Scene(grid);
+        Scene scene1 = new Scene(grid, 400, 400);
 
         // Grid for output 
         GridPane grid1 = new GridPane();
