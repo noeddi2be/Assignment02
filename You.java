@@ -5,7 +5,10 @@ public class You {
     private String firstname;
     private String lastname;
     private int age;
-    private String ethnicity;
+    public enum Ethnicity {
+        African, American, Australian, Asian, European, Latin_American
+    };
+    private Ethnicity yEthnicity;
 
     // Setters and Getters
     public void setFirstname(String firstname) {
@@ -20,12 +23,12 @@ public class You {
         this.age = age;
     }
 
-    public void setEthnicity(String ethnicity) {
-        this.ethnicity = ethnicity;
+    public void setEthnicity(Ethnicity yEthnicity) {
+        this.yEthnicity = yEthnicity;
     }
 
     public String getYou() {
-        return "First Name: " + firstname + "\n" + "Last Name: " + lastname + "\n" + "Age: " + age + "\n" + "Ethnicity: " + ethnicity;
+        return "First Name: " + firstname + "\n" + "Last Name: " + lastname + "\n" + "Age: " + age + "\n" + "Ethnicity: " + yEthnicity.toString();
     }
 }
 
