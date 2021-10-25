@@ -1,11 +1,12 @@
 import java.util.Scanner;
 import javafx.application.Application;
-import javafx.geometry.Pos;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.*;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.geometry.*;
 
 public class WhoAreYou extends Application {
 
@@ -58,17 +59,19 @@ public class WhoAreYou extends Application {
         }
 
         // Scene with Main Grid
-        GridPane grid = new GridPane();
-        Scene scene1 = new Scene(grid, 400, 400);
-
-        // Grid for output 
-        GridPane grid1 = new GridPane();
-        GridPane.setConstraints(grid1, 0, 0);
+        GridPane mainGrid = new GridPane();
+        Scene scene1 = new Scene(mainGrid, 300, 300);
+        mainGrid.setPadding(new Insets(10, 10, 10, 10));
+        mainGrid.setVgap(30);
+        mainGrid.setHgap(100);
+        BackgroundFill backgroundFill = new BackgroundFill(Color.rgb(188,213,255), CornerRadii.EMPTY, Insets.EMPTY);
+        Background background = new Background(backgroundFill);
+        mainGrid.setBackground(background);
 
         // Labels
         Label firstNameLabel = new Label("First Name: ");
         GridPane.setConstraints(firstNameLabel, 0, 0);
-
+        
         Label lastNameLabel = new Label("Last Name: ");
         GridPane.setConstraints(lastNameLabel, 0, 1);
 
@@ -96,18 +99,16 @@ public class WhoAreYou extends Application {
         yourEthnicity.setText(person01.getEthnicity().toString());
         GridPane.setConstraints(yourEthnicity, 1, 3);
 
-        // Adding to main Grid
-        grid.getChildren().add(grid1);
 
         // Adding to Grid1
-        grid1.getChildren().add(firstNameLabel);
-        grid1.getChildren().add(lastNameLabel);
-        grid1.getChildren().add(ageLabel);
-        grid1.getChildren().add(ethnicityLabel);
-        grid1.getChildren().add(yourFirstName);
-        grid1.getChildren().add(yourLastaName);
-        grid1.getChildren().add(yourAge);
-        grid1.getChildren().add(yourEthnicity);
+        mainGrid.getChildren().add(firstNameLabel);
+        mainGrid.getChildren().add(lastNameLabel);
+        mainGrid.getChildren().add(ageLabel);
+        mainGrid.getChildren().add(ethnicityLabel);
+        mainGrid.getChildren().add(yourFirstName);
+        mainGrid.getChildren().add(yourLastaName);
+        mainGrid.getChildren().add(yourAge);
+        mainGrid.getChildren().add(yourEthnicity);
 
         // Set and show scene
         primaryStage.setTitle("This is me!");
