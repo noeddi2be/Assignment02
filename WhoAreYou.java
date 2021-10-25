@@ -30,7 +30,7 @@ public class WhoAreYou extends Application {
         person01.setAge(scan.nextInt()); 
         scan.nextLine();
         
-        System.out.println("Please enter your ethnicity: ");
+        System.out.println("Please enter your Ethnicity: [African, American, Australian, Asian, European, Latin American]");
         String inputEthnicity = scan.nextLine();
 
         scan.close();
