@@ -71,15 +71,19 @@ public class WhoAreYou extends Application {
         // Labels
         Label firstNameLabel = new Label("First Name: ");
         GridPane.setConstraints(firstNameLabel, 0, 0);
+        mainGrid.getChildren().add(firstNameLabel);
         
         Label lastNameLabel = new Label("Last Name: ");
         GridPane.setConstraints(lastNameLabel, 0, 1);
+        mainGrid.getChildren().add(lastNameLabel);
 
         Label ageLabel = new Label("Age: ");
         GridPane.setConstraints(ageLabel, 0, 2);
+        mainGrid.getChildren().add(ageLabel);
 
         Label ethnicityLabel = new Label("Ethnicity: ");
         GridPane.setConstraints(ethnicityLabel, 0, 3);
+        mainGrid.getChildren().add(ethnicityLabel);
 
         // Feedback Text
         Text yourFirstName = new Text();
